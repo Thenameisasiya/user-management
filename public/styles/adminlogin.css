@@ -1,0 +1,119 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background-color: #e6f2ff; /* Light blue background */
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Main Wrapper */
+.wrapper {
+  background-color: #ffffff; /* White background for the form */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 400px;
+  border-radius: 8px;
+}
+
+/* Heading */
+.heading h1 {
+  text-align: center;
+  color: #2c3e50; /* Dark blue-gray for the heading */
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form span {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.form input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 16px;
+  outline: none;
+  border-radius: 4px;
+  background-color: #f5faff; /* Light blue background for input */
+}
+
+.form input:focus {
+  border: 2px solid #3498db; /* Highlight border on focus with blue */
+}
+
+/* Icons */
+.fa-user,
+.fas.fa-envelope,
+.fa-solid.fa-lock {
+  font-size: 18px;
+  color: #3498db; /* Blue for icons */
+}
+
+/* Submit Button */
+button {
+  background-color: #3498db; /* Blue button */
+  color: #fff;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* SweetAlert Custom Button */
+.orange-btn {
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+/* Optional Styling for Validation Message */
+#error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: green;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+

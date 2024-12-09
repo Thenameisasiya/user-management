@@ -1,0 +1,356 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #eceff1;
+  color: #2c3e50;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #00796b;
+  color: white;
+}
+
+.navbar h1 {
+  font-size: 24px;
+}
+
+.logout-btn {
+  background-color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 15px;
+  color: #00796b;
+  border: none;
+  border-radius: 5px;
+}
+
+.icon-logout {
+  margin-right: 8px;
+}
+
+/* Main content area */
+.main-content {
+  padding: 20px;
+}
+
+/* Buttons */
+.btn {
+  background-color: #00796b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: #004d40;
+}
+
+.add-user-btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.delete-btn {
+  background-color: #d32f2f;
+}
+
+.edit-btn {
+  background-color: #1976d2;
+}
+
+/* Table Styles */
+table {
+  width: 90%; /* Slightly reduced width */
+  margin-top: 20px;
+  border-collapse: collapse;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Added box-shadow */
+  border-radius: 8px;
+}
+
+table, th, td {
+  border: 1px solid #b0bec5;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #eceff1;
+}
+
+/* Delete Confirmation Container */
+.delete-confirmation-container {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 300px;
+  z-index: 100;
+}
+
+.delete-confirmation-content i {
+  font-size: 30px;
+  color: #d32f2f;
+}
+
+.delete-confirmation-content h3 {
+  margin: 20px 0;
+  color: #2c3e50;
+}
+
+.confirmation-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirmation-buttons button {
+  width: 48%;
+}
+
+.cancel-btn {
+  background-color: #00796b;
+}
+
+.delete-btn {
+  background-color: #d32f2f;
+}
+
+/* Icons */
+.icon-warning {
+  color: #d32f2f;
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.icon-plus, .icon-edit, .icon-delete {
+  margin-right: 8px;
+}
+
+/* Form and Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  margin: auto;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+.close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Input fields */
+form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #b0bec5;
+  border-radius: 4px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 16px;
+}
+
+form button:hover {
+  background-color: #004d40;
+}
+
+/* Save Button Centering */
+.modal-content form button {
+  margin-top: 20px;
+}
+
+/* Delete Button Styles */
+.delete-btn {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c62828;
+  border: none;
+}
+
+/* Edit Button Styles */
+.edit-btn {
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #1976d2;
+  border: none;
+}
+
+/* Centering Save Button */
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Warning/Error Icon for Delete Confirmation */
+.delete-confirmation-container .icon-warning {
+  color: #d32f2f;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Logout Button */
+.logout-btn {
+  background-color: white;  /* White background */
+  color: #00796b;   /* Dark text color */
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 15px;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #004d40;  /* Darker green on hover */
+  color: white;  /* White text color when hovered */
+  border: none;
+}
+
+.icon-logout {
+  margin-right: 8px;
+}
+
+/* Container for search input and button */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between the input and button */
+  padding: 10px;
+}
+
+/* Style for the search input box */
+.search-container input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  height: 40px; /* Match the button height */
+  width: 300px;
+  border: none; /* No border */
+  border-radius: 30px; /* Rounded corners */
+  outline: none; /* Removes the default outline when focused */
+  background-color: white; /* White background */
+  color: #2c3e50; /* Dark text color */
+  font-family: 'Roboto', sans-serif; /* Use a clean, modern font */
+  box-sizing: border-box; /* Ensures padding doesn't overflow */
+}
+
+/* Placeholder text style */
+.search-container input[type="text"]::placeholder {
+  color: #7f8c8d; /* Light gray placeholder text */
+  font-style: italic; /* Italicize placeholder text */
+}
+
+/* Style for the search button */
+.search-btn {
+  padding: 10px 15px; /* Adjust padding */
+  font-size: 16px; /* Match the input font size */
+  height: 40px; /* Match the input box height */
+  background-color: white; /* White background */
+  color: #2c3e50; /* Dark text color */
+  border: none; /* No border */
+  border-radius: 30px; /* Rounded corners */
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif; /* Set a readable font */
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center; /* Center the content in the button */
+  justify-content: center; /* Center the content in the button */
+}
+
+/* Hover effect for the button */
+.search-btn:hover {
+  background-color: #f0f0f0; /* Light gray on hover */
+}
+
+/* Focus style for the button */
+.search-btn:focus {
+  outline: none; /* Remove focus outline */
+}
+
+/* Optional: Adding a search icon inside the button */
+.search-btn i {
+  font-size: 20px; /* Icon size */
+}
