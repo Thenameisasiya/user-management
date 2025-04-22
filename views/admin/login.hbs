@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="/styles/adminlogin.css">
+
+<title>login</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!-- Add SweetAlert -->
+
+<form action="/admin/login" method="post">
+<div class="wrapper">
+  <div class="heading">
+    <h1>Login Form</h1>
+  </div>
+  <div class="form">
+    <form>
+      <input type="hidden" id="message" value="{{{message}}}" name="message"> <!-- Hidden input for message -->
+      {{!-- <span>
+        <i class="fa fa-user"></i>
+        <input type="text" id="username" placeholder="Username" name="username">
+      </span><br> --}}
+      <span>
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="email" placeholder="E-mail" name="email"> 
+      </span><br>
+      <span>
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" id="password" placeholder="Password" name="password"> 
+      </span><br>
+      <button>login</button>
+    </form>
+  </div>
+</div>
+</div>
+</form>
+
+
+<script>
+
+ document.addEventListener("DOMContentLoaded", function () {
+    // Show message if exists
+    const message = '{{message}}';  // Message passed from the controller
+    const messageType = '{{messageType}}';  // Optional: Message type (success, error, etc.)
+
+    if (message) {
+        // Check the messageType and display appropriate SweetAlert
+        let iconType = "info";  // Default to info icon
+        if (messageType === 'success') {
+            iconType = "success";  // Success icon (tick mark)
+        } else if (messageType === 'error') {
+            iconType = "error";  // Error icon (cross mark)
+        }
+
+        swal({
+            title: messageType === 'success' ? "Success" : "Oops!",  // Title based on messageType
+            text: message,  // Message content passed from the controller
+            icon: iconType,  // Set icon based on messageType
+            button: {
+                text: "OK",
+                className: "orange-btn", // Custom class for styling
+            },
+        });
+    }
+
+    const form = document.querySelector('form');
+    form.addEventListener('submit', formvalidate); 
+});
+
+  
+</script>

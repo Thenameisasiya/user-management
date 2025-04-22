@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Back - Dashboard</title>
+    <link rel="stylesheet" href="/styles/userHome.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/user/userHome"></a></li>
+                <li><a href="">Settings</a></li>
+                <li><a href="/user/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="dashboard">
+        <div class="welcome-message">
+            <h1>Welcome, {{user.username}}!</h1>
+            <p>Here's an overview of your dashboard.</p>
+        </div>
+
+        <div class="dashboard-cards">
+            <div class="card">
+                <h2>Your Posts</h2>
+                <p>View and manage your posts.</p>
+                <a href="" class="btn">Go to Posts</a>
+            </div>
+            <div class="card">
+                <h2>Your Messages</h2>
+                <p>Check your inbox for new messages.</p>
+                <a href="" class="btn">View Messages</a>
+            </div>
+            <div class="card">
+                <h2>Settings</h2>
+                <p>Update your account settings.</p>
+                <a href="" class="btn">Go to Settings</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+
+    <script>
+      
+       // Example JavaScript to handle user interactions on the dashboard
+
+   document.addEventListener("DOMContentLoaded", () => {
+    // Example: Highlight the active link in the navbar when clicked
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Remove active class from all links
+            navLinks.forEach(link => link.classList.remove('active'));
+            // Add active class to the clicked link
+            e.target.classList.add('active');
+        });
+    });
+
+    // Example: Display a confirmation message when logging out
+    const logoutBtn = document.querySelector('a[href="/logout"]');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', (e) => {
+            const confirmLogout = confirm('Are you sure you want to log out?');
+            if (!confirmLogout) {
+                e.preventDefault();  // Prevent logout if the user cancels
+            }
+        });
+    }
+});
+
+
+    </script>
+</body>
+</html>

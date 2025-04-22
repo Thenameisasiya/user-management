@@ -1,0 +1,192 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Background & Centering the Form */
+body {
+  background-color: #f4f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main Container */
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Heading Section */
+.heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.text-large {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.text-normal {
+  font-size: 14px;
+  color: #777;
+}
+
+.text-links {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.text-links:hover {
+  text-decoration: underline;
+}
+
+/* Form Styling */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input Field Styling */
+.input-control {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-label {
+  font-size: 14px;
+  color: #333;
+}
+
+.input-field {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-top: 8px;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: #3498db;
+}
+
+/* Submit Button */
+.input-submit {
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;  /* Makes the button take the full width of its container */
+}
+
+.input-submit:hover {
+  background-color: #2980b9;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.input-submit:active {
+  background-color: #1a6fa7;
+}
+
+/* Already Account Section */
+.already-account {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.already-account p {
+  font-size: 14px;
+  color: #777;
+}
+
+.already-account-link {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.already-account-link:hover {
+  text-decoration: underline;
+}
+
+/* Striped Line */
+.striped {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.striped-line {
+  width: 45%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.striped-text {
+  padding: 0 10px;
+  color: #777;
+}
+
+/* Social Login Methods */
+.method {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.method-control {
+  display: flex;
+  align-items: center;
+}
+
+.method-action {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #777;
+  font-size: 16px;
+}
+
+.method-action i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.method-action:hover {
+  color: #3498db;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+
+  .input-submit {
+    width: 100%;
+  }
+}
